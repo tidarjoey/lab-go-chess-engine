@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-    b := model.NewBoard()
-    fmt.Println(b)
+    newGame := model.NewBoard()
+    newGame.Print()
     fmt.Println("Chess Engine started!")
 }

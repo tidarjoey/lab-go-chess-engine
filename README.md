@@ -15,7 +15,7 @@ type Piece struct {
 
 ### The board
 
-To represent 8 x 8 tiles layout
+To represent 8 x 8 tiles layout and the state of the game.
 
 #### Two-Dimensional Slice Structure: An 8x8 slice ([][]Piece), where Piece is a custom struct representing a chess piece.
 - **Pros**: Intuitive and easy to understand. Directly maps to the physical layout of a chessboard.
