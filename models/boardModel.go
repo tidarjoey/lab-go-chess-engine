@@ -30,11 +30,8 @@ func (board *Board) Print() {
             fmt.Printf("[%s]", piece.Unicode())
         }
 
-        fmt.Printf(" %d", 8-i)
         fmt.Println()
     }
-
-    printColumnLabels()
 }
 
 func placeNonPawns(board *Board) {
