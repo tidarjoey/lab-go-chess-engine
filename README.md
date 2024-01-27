@@ -36,11 +36,25 @@ To represent 8 x 8 tiles layout and the state of the game.
 1 [ ♜ ][ ♞ ][ ♝ ][ ♛ ][ ♚ ][ ♝ ][ ♞ ][ ♜ ]
 ```
 
-### Move Validations
-- **Responsibility**: TManages the rules of the chess game. It should validate whether moves are legal and update the game state accordingly.
+## Services
+Handles smallest game logic such as validating moves, updating the game state, and any other rules of chess.
+
+### Moves
+- **Responsibility**: 
+    - Manages the move rules of each piece. It should be able to return possible moves for each piece on their position.
+    - Validate the end position of a move from user input.
+
+### Game state
+- **Responsibility**: Validate game states such as check and checkmates after each move
 
 ## Controllers
+Handles user input and flow control.
 
-### User Input
+### New game
+Creates a new game state.
+
+### Update game
+
+#### User Input
 - **Responsibility**: The controller layer will handle user interactions. In this case, it's responsible for taking user input, interpreting it, and passing it on to the model layer.
-- **Console input**: receives straightforward `start` and `end` position like "e2 e4", which means move piece in `e2` to `e4`.
+- **Console input**: receives straightforward `start` and `end` position separately like "e2" and then "e4", which means move piece in `e2` to `e4`.
