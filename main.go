@@ -1,12 +1,16 @@
 package main
 
 import (
+	// "lab-go-chess-engine/models"
+	// "lab-go-chess-engine/services"
 	"fmt"
-	"lab-go-chess-engine/models"
+	controller "lab-go-chess-engine/controllers"
 )
 
 func main() {
-	newGame := model.NewBoard()
-	newGame.Print()
-	fmt.Println("Chess Engine started!")
+	game := controller.New()
+	if game == nil {
+		fmt.Println("Game ended.")
+	}
+	game.Playing()
 }
