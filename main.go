@@ -11,6 +11,7 @@ func main() {
 	game := controller.New()
 	if game == nil {
 		fmt.Println("Game ended.")
+	} else {
+		game.Playing()
 	}
-	game.Playing()
 }
